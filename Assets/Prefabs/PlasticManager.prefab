@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4832219722680349990}
   - component: {fileID: 4113857881480052607}
   - component: {fileID: 3985686753896282277}
-  - component: {fileID: 5028669451486699812}
   - component: {fileID: 3159721196071236321}
   - component: {fileID: 6286784696971599517}
   m_Layer: 0
@@ -48,7 +47,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06308415b8ad3374ba19e3d4991e7e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCleanersCreated:
+    m_PersistentCalls:
+      m_Calls: []
   <PlayerData>k__BackingField: {fileID: 11400000, guid: ee1d9132fadb0cc4f874a39ff4e0abf7, type: 2}
+  m_bactButton: {fileID: 0}
+  BactCleanAmount: 5
+  BactInterval: 5
+  m_enzyButton: {fileID: 0}
+  EnzyCleanAmount: 5
+  EnzyInterval: 5
+  m_mycoButton: {fileID: 0}
+  MycoCleanAmount: 5
+  MycoInterval: 5
+  m_phytButton: {fileID: 0}
+  PhytCleanAmount: 5
+  PhytInterval: 5
 --- !u!114 &3985686753896282277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,18 +73,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e76c5d7bbe39fac448992ad2eeff1a90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5028669451486699812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6557775210020556148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e5e7e08aa8cbbd458f19f2eb5bd35d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3159721196071236321
@@ -85,8 +87,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988ad823ba1524046abb44534eca9169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_text: {fileID: 0}
+  m_plasticCleanedText: {fileID: 0}
   m_prefix: 'Plastics Cleaned:'
+  m_bactText: {fileID: 0}
+  m_enzyText: {fileID: 0}
+  m_mycoText: {fileID: 0}
+  m_phytText: {fileID: 0}
 --- !u!114 &6286784696971599517
 MonoBehaviour:
   m_ObjectHideFlags: 0

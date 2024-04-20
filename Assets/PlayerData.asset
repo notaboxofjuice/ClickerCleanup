@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e05b536544923d84a899a72c27cdf24f, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  TotalPlasticCleaned: 0
+  OnPlasticCleaned:
+    m_PersistentCalls:
+      m_Calls: []
+  m_plasticCleaned: 0
+  PassiveCleaners: []

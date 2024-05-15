@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void Clean(float plastic) // Add the plastic to the total
     {
         PlasticCleaned += plastic;
+        CarbonCredits += plastic;
     }
     public void CleanByType(CleanerType type)
     {

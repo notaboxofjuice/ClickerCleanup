@@ -1,54 +1,52 @@
-using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IDataPersistence
 {
     public static GameManager Instance { get; private set; }
-    public UnityEvent OnCleanersCreated;
-    public UnityEvent OnDataWiped;
-    [field: SerializeField] public PlayerData_SO PlayerData { get; private set; }
     private float m_bactTimer = 0;
     private float m_enzyTimer = 0;
     private float m_mycoTimer = 0;
     private float m_phytTimer = 0;
-    private readonly float[] intervals = new float[4];
-    private readonly float[] amounts = new float[4];
-    [Header("Bacteria")]
+    [Header("Dictionaries")]
+    public SerializableDictionary<CleanerType, int> Cleaners;
+    public SerializableDictionary<CleanerType, float> Intervals;
+    public SerializableDictionary<CleanerType, int> BoostCounts;
+    public SerializableDictionary<CleanerType, float> BoostPercents;
+    [Header("Buttons")]
     [SerializeField] Button m_bactButton;
-    public float BactCleanAmount;
-    public float BactInterval;
-    [Header("Enzyme")]
     [SerializeField] Button m_enzyButton;
-    public float EnzyCleanAmount;
-    public float EnzyInterval;
-    [Header("Myco")]
     [SerializeField] Button m_mycoButton;
-    public float MycoCleanAmount;
-    public float MycoInterval;
-    [Header("Phyto")]
     [SerializeField] Button m_phytButton;
-    public float PhytCleanAmount;
-    public float PhytInterval;
+    [Header("Data Stuff")]
+    public UnityEvent OnPlasticChanged;
+    public UnityEvent OnCreditsChanged;
+    public UnityEvent OnCleanersChanged;
+    [SerializeField] private float m_plasticCleaned;
+    [SerializeField] private float m_carbonCredits;
+    public float PlasticCleaned
+    {
+        get { return m_plasticCleaned; }
+        set
+        {
+            m_plasticCleaned = value;
+            OnPlasticChanged.Invoke();
+        }
+    }
+    public float CarbonCredits
+    {
+        get { return m_carbonCredits; }
+        set
+        {
+            m_carbonCredits = value;
+            OnCreditsChanged.Invoke();
+        }
+    }
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Debug.LogError("Too many GameManagers in the scene!");
-        intervals[0] = BactInterval;
-        intervals[1] = EnzyInterval;
-        intervals[2] = MycoInterval;
-        intervals[3] = PhytInterval;
-        amounts[0] = BactCleanAmount;
-        amounts[1] = EnzyCleanAmount;
-        amounts[2] = MycoCleanAmount;
-        amounts[3] = PhytCleanAmount;
-#if UNITY_EDITOR
-        for (int i = 0; i < 4; i++)
-        {
-            intervals[i] = Random.Range(4, 10);
-            amounts[i] = Random.Range(4, 10);
-        }
-#endif
     }
     private void Start()
     {
@@ -66,22 +64,22 @@ public class GameManager : MonoBehaviour
         m_enzyTimer += time;
         m_mycoTimer += time;
         m_phytTimer += time;
-        if (m_bactTimer > BactInterval)
+        if (Intervals.ContainsKey(CleanerType.BACTERIA) && m_bactTimer > Intervals[CleanerType.BACTERIA])
         {
             CleanByType(CleanerType.BACTERIA);
             m_bactTimer = 0;
         }
-        if (m_enzyTimer > EnzyInterval)
+        if (Intervals.ContainsKey(CleanerType.ENZYME) && m_enzyTimer > Intervals[CleanerType.ENZYME])
         {
             CleanByType(CleanerType.ENZYME); 
             m_enzyTimer = 0;
         }
-        if (m_mycoTimer > MycoInterval)
+        if (Intervals.ContainsKey(CleanerType.MYCO) && m_mycoTimer > Intervals[CleanerType.MYCO])
         {
             CleanByType(CleanerType.MYCO);
             m_mycoTimer = 0;
         }
-        if (m_phytTimer > PhytInterval)
+        if (Intervals.ContainsKey(CleanerType.PHYTO) && m_phytTimer > Intervals[CleanerType.PHYTO])
         {
             CleanByType(CleanerType.PHYTO);
             m_phytTimer = 0;
@@ -89,87 +87,39 @@ public class GameManager : MonoBehaviour
     }
     public void Clean(float plastic) // Add the plastic to the total
     {
-        PlayerData.PlasticCleaned += plastic;
+        PlasticCleaned += plastic;
     }
     public void CleanByType(CleanerType type)
     {
-        float count = 0;
-        foreach (PassiveCleaner_SO cleaner in PlayerData.PassiveCleaners)
-        {
-            if (!cleaner.Type.Equals(type)) continue; // If this isn't the type of cleaner we want to update, continue
-            Clean(cleaner.AmountToClean);
-
-            count += cleaner.AmountToClean;
-        }
-        Debug.Log(type + " cleaned " + count);
-    }
-    public void WipeSaveData() // Go through and reset all the values to their default values
-    {
-        PlayerData.PlasticCleaned = 0;
-        PlayerData.PassiveCleaners.Clear();
-        OnDataWiped.Invoke();
-        Debug.Log("Wiped save data");
-    }
-    public void UpdateCleanerEfficiency(CleanerType type, float newAmount, float newInterval)
-    {
-        Debug.Log("Updating " + type + "cleaner to clean " + newAmount + " every " + newInterval + " seconds");
-        switch (type)
-        {
-            case CleanerType.BACTERIA:
-                BactCleanAmount = newAmount;
-                BactInterval = newInterval;
-                break;
-            case CleanerType.ENZYME:
-                EnzyCleanAmount = newAmount;
-                EnzyInterval = newInterval;
-                break;
-            case CleanerType.MYCO:
-                MycoCleanAmount = newAmount;
-                MycoInterval = newInterval;
-                break;
-            case CleanerType.PHYTO:
-                PhytCleanAmount = newAmount;
-                PhytInterval = newInterval;
-                break;
-        }
-        UpdateCleanEfficiencyByType(type, newAmount, newInterval);
+        Cleaners.TryGetValue(type, out int cleanerCount);
+        BoostCounts.TryGetValue(type, out int boostCount);
+        BoostPercents.TryGetValue(type, out float boostPercent);
+        int plastic = Mathf.RoundToInt(cleanerCount * (1 + boostCount * boostPercent));
+        Clean(plastic);
+        Debug.Log(type + " cleaned " + plastic);
     }
     public void CreateNewCleaners(CleanerType type, int quantity = 1)
     {
         Debug.Log("Creating " + quantity + " new " + type + " cleaner(s)");
-        for (int i = 0; i < quantity; i++)
-        {
-            PassiveCleaner_SO newCleaner = ScriptableObject.CreateInstance<PassiveCleaner_SO>();
-            switch (newCleaner.Type)
-            {
-                case CleanerType.BACTERIA:
-                    newCleaner.AmountToClean = BactCleanAmount;
-                    newCleaner.CleaningInterval = BactInterval;
-                    break;
-                case CleanerType.ENZYME:
-                    newCleaner.AmountToClean = EnzyCleanAmount;
-                    newCleaner.CleaningInterval = EnzyInterval;
-                    break;
-                case CleanerType.MYCO:
-                    newCleaner.AmountToClean = MycoCleanAmount;
-                    newCleaner.CleaningInterval = MycoInterval;
-                    break;
-                case CleanerType.PHYTO:
-                    newCleaner.AmountToClean = PhytCleanAmount;
-                    newCleaner.CleaningInterval = PhytInterval;
-                    break;
-            }
-            PlayerData.PassiveCleaners.Add(newCleaner);
-        }
-        OnCleanersCreated.Invoke();
+        Cleaners[type] += quantity;
+        OnCleanersChanged.Invoke();
     }
-    public void UpdateCleanEfficiencyByType(CleanerType type, float newAmount, float newInterval)
+    public void LoadData(GameData data)
     {
-        foreach (PassiveCleaner_SO cleaner in PlayerData.PassiveCleaners)
-        {
-            if (!cleaner.Type.Equals(type)) continue; // If this isn't the type of cleaner we want to update, continue
-            cleaner.AmountToClean = newAmount;
-            cleaner.CleaningInterval = newInterval;
-        }
+        PlasticCleaned = data.PlasticCleaned;
+        CarbonCredits = data.CarbonCredits;
+        Cleaners = data.Cleaners;
+        Intervals = data.Intervals;
+        BoostCounts = data.BoostCounts;
+        BoostPercents = data.BoostPercents;
+    }
+    public void SaveData(ref GameData data)
+    {
+        data.PlasticCleaned = PlasticCleaned;
+        data.CarbonCredits = CarbonCredits;
+        data.Cleaners = Cleaners;
+        data.Intervals = Intervals;
+        data.BoostCounts = BoostCounts;
+        data.BoostPercents = BoostPercents;
     }
 }

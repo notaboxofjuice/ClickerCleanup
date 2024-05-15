@@ -11,11 +11,9 @@ public class UpdateText : MonoBehaviour
     private void Start()
     {
         m_prefix += " ";
-        GameManager.Instance.PlayerData.OnPlasticCleaned.AddListener(UpdatePlasticCleanedText);
-        GameManager.Instance.OnCleanersCreated.AddListener(UpdateStoreTexts);
-        GameManager.Instance.OnDataWiped.AddListener(UpdateAllTexts);
-        UpdatePlasticCleanedText();
-        UpdateStoreTexts();
+        GameManager.Instance.OnPlasticChanged.AddListener(UpdatePlasticCleanedText);
+        GameManager.Instance.OnCleanersChanged.AddListener(UpdateStoreTexts);
+        UpdateAllTexts();
     }
     private void UpdateAllTexts()
     {
@@ -25,36 +23,14 @@ public class UpdateText : MonoBehaviour
     private void UpdatePlasticCleanedText()
     {
         Debug.Log("Updating total plastic cleaned text");
-        m_plasticCleanedText.text = m_prefix + GameManager.Instance.PlayerData.PlasticCleaned.ToString();
+        m_plasticCleanedText.text = m_prefix + GameManager.Instance.PlasticCleaned.ToString();
     }
     private void UpdateStoreTexts()
     {
         Debug.Log("Updating store texts");
-        int bact = 0;
-        int enzy = 0;
-        int myco = 0;
-        int phyt = 0;
-        foreach (PassiveCleaner_SO cleaner in GameManager.Instance.PlayerData.PassiveCleaners)
-        {
-            switch (cleaner.Type)
-            {
-                case CleanerType.BACTERIA:
-                    bact++;
-                    break;
-                case CleanerType.ENZYME:
-                    enzy++;
-                    break;
-                case CleanerType.MYCO:
-                    myco++;
-                    break;
-                case CleanerType.PHYTO:
-                    phyt++;
-                    break;
-            }
-        }
-        m_bactText.text = bact.ToString();
-        m_enzyText.text = enzy.ToString();
-        m_mycoText.text = myco.ToString();
-        m_phytText.text = phyt.ToString();
+        if (GameManager.Instance.Cleaners.ContainsKey(CleanerType.BACTERIA)) m_bactText.text = GameManager.Instance.Cleaners[CleanerType.BACTERIA].ToString();
+        if (GameManager.Instance.Cleaners.ContainsKey(CleanerType.ENZYME)) m_enzyText.text = GameManager.Instance.Cleaners[CleanerType.ENZYME].ToString();
+        if (GameManager.Instance.Cleaners.ContainsKey(CleanerType.MYCO)) m_mycoText.text = GameManager.Instance.Cleaners[CleanerType.MYCO].ToString();
+        if (GameManager.Instance.Cleaners.ContainsKey(CleanerType.PHYTO)) m_phytText.text = GameManager.Instance.Cleaners[CleanerType.PHYTO].ToString();
     }
 }

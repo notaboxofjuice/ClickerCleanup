@@ -21,10 +21,10 @@ public class GameData
         };
         Intervals = new()
         {
-            { CleanerType.BACTERIA, 0 },
-            { CleanerType.ENZYME, 0 },
-            { CleanerType.MYCO, 0 },
-            { CleanerType.PHYTO, 0 }
+            { CleanerType.BACTERIA, 10 },
+            { CleanerType.ENZYME, 10 },
+            { CleanerType.MYCO, 10 },
+            { CleanerType.PHYTO, 10 }
         };
         BoostCounts = new()
         {

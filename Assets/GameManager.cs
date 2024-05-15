@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
     public void CreateNewCleaners(CleanerType type, int quantity = 1)
     {
         Debug.Log("Creating " + quantity + " new " + type + " cleaner(s)");
+        if (!Cleaners.ContainsKey(type)) Cleaners[type] = 0;
         Cleaners[type] += quantity;
         OnCleanersChanged.Invoke();
     }

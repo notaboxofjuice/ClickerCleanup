@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4113857881480052607}
   - component: {fileID: 3985686753896282277}
   - component: {fileID: 3159721196071236321}
-  - component: {fileID: 6286784696971599517}
   m_Layer: 0
   m_Name: PlasticManager
   m_TagString: Untagged
@@ -47,22 +46,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06308415b8ad3374ba19e3d4991e7e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnCleanersCreated:
+  Cleaners:
+    keys: 
+    values: 
+  Intervals:
+    keys: 
+    values: []
+  BoostCounts:
+    keys: 
+    values: 
+  BoostPercents:
+    keys: 
+    values: []
+  m_bactButton: {fileID: 0}
+  m_enzyButton: {fileID: 0}
+  m_mycoButton: {fileID: 0}
+  m_phytButton: {fileID: 0}
+  OnPlasticChanged:
     m_PersistentCalls:
       m_Calls: []
-  <PlayerData>k__BackingField: {fileID: 11400000, guid: ee1d9132fadb0cc4f874a39ff4e0abf7, type: 2}
-  m_bactButton: {fileID: 0}
-  BactCleanAmount: 5
-  BactInterval: 5
-  m_enzyButton: {fileID: 0}
-  EnzyCleanAmount: 5
-  EnzyInterval: 5
-  m_mycoButton: {fileID: 0}
-  MycoCleanAmount: 5
-  MycoInterval: 5
-  m_phytButton: {fileID: 0}
-  PhytCleanAmount: 5
-  PhytInterval: 5
+  OnCreditsChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCleanersChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_plasticCleaned: 0
+  m_carbonCredits: 0
 --- !u!114 &3985686753896282277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,20 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_plasticCleanedText: {fileID: 0}
-  m_prefix: 'Plastics Cleaned:'
+  m_carbonCreditsText: {fileID: 0}
+  m_plasticPrefix: Plastic
+  m_creditsPrefix: Credits
   m_bactText: {fileID: 0}
   m_enzyText: {fileID: 0}
   m_mycoText: {fileID: 0}
   m_phytText: {fileID: 0}
---- !u!114 &6286784696971599517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6557775210020556148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27a2ffe5dac07434bb9a4becc022b547, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

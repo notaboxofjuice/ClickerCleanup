@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0818200a24e3114a9c01e9c166595bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fileName: data.game
+  m_fileName: clickercleanup_data.game

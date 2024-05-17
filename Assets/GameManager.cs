@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
             m_mycoIntervalTracker += time;
             m_mycoTimeText.text = MycoDisplayTime;
         }
-        if (Cleaners[CleanerType.MYCO] > 0)
+        if (Cleaners[CleanerType.PHYTO] > 0)
         {
             m_phytIntervalTracker += time;
             m_phytTimeText.text = PhytDisplayTime;

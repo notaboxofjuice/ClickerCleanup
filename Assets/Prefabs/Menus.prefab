@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1389401240839270194, guid: 788ecc9ae15931e4f83a692195f29638, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2429691296026943893, guid: 788ecc9ae15931e4f83a692195f29638, type: 3}
       propertyPath: m_Name
       value: Home
@@ -335,6 +339,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -455.3222
       objectReference: {fileID: 0}
+    - target: {fileID: 123440614062052286, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
+      propertyPath: m_text
+      value: Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257281599617632492, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
+      propertyPath: m_text
+      value: "Ionata et al. (2024) highlight that phytoremediation is a promising
+        technology for removing environmental pollutants because it is a low-impact,
+        sustainable, and cost-effective approach compared to physical and chemical
+        methods. The authors emphasize that it is 5 to 13 times cheaper than other
+        remediation techniques and allows for exploiting the produced biomass for
+        biofuel and energy.\r\n\r\nThe authors also mention that plants' slow growth
+        and detoxification rate can hinder their effectiveness, especially in heavily
+        polluted areas. Additionally, the limited reach of plant roots may not address
+        contamination at greater depths. The process is also susceptible to seasonal
+        and weather fluctuations, impacting plant growth and remediation efficiency.
+        Introducing non-native plant species for phytoremediation can disrupt the
+        local ecosystem. Lastly, the safe disposal or utilization of contaminated
+        plant biomass poses a challenge to prevent further pollution.\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 1651227228777619079, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -418,6 +442,31 @@ PrefabInstance:
     - target: {fileID: 3178874624098699464, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3667224595429875961, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
+      propertyPath: m_text
+      value: "Mycoremediation, using fungi in bioremediation, presents a promising
+        and eco-friendly approach to address environmental pollution. It offers several
+        advantages, including cost-effectiveness, adaptability to diverse environments,
+        and the ability to degrade a wide range of pollutants, including heavy metals
+        and petroleum hydrocarbons (Bosco et al., 2019). Fungi possess unique characteristics,
+        such as a high adsorption and accumulation capacity for heavy metals, making
+        them valuable agents for treating contaminated wastewater (Kumar & Dwivedi,
+        2021). Additionally, their capacity to colonize and thrive in extreme environments
+        and their production of bioactive compounds and extracellular enzymes further
+        enhance their effectiveness in bioremediation (Bosco et al., 2019).\r\n\r\nHowever,
+        mycoremediation also faces challenges and limitations. Research on the fungal
+        degradation of aliphatic hydrocarbons, a common soil pollutant, remains limited,
+        particularly in understanding the degradation pathways and enzymes involved
+        (Ant\xF3n-Herrero et al., 2023). The process can be time-consuming compared
+        to some conventional treatments, and scaling up from laboratory to field
+        scale presents difficulties in maintaining stable fungal-bacterial communities
+        and optimizing conditions (Ant\xF3n-Herrero et al., 2023). Moreover, a gap
+        between basic research and industrial applications hinders the widespread
+        adoption of mycoremediation technologies (Ant\xF3n-Herrero et al., 2023).
+        In some cases, the accumulation of toxic intermediates during degradation
+        necessitates careful monitoring and management (Ant\xF3n-Herrero et al.,
+        2023).\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3853970536238053010, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -563,6 +612,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -64
       objectReference: {fileID: 0}
+    - target: {fileID: 8550389221418410591, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
+      propertyPath: m_text
+      value: "Enzyme-based bioremediation is a promising approach for removing emerging
+        contaminants (ECs) like micro-nano plastics due to its environmentally friendly
+        nature and rapid reaction times (Zhou et al., 2022). Enzymes like oxidoreductases
+        and hydrolases have shown high efficiency in degrading various ECs, including
+        pharmaceuticals, personal care products, and industrial dyes (Amaro Bittencourt
+        et al., 2023).\n\nHowever, challenges like the high cost of enzymes and the
+        need for more research on large-scale applications in real-world environments
+        remain (Amaro Bittencourt et al., 2023).\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 8865012306685022202, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -658,6 +718,30 @@ PrefabInstance:
     - target: {fileID: 8960356589315240013, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979699537795570065, guid: c86647b4b6edc294f9d94ef926f407c4, type: 3}
+      propertyPath: m_text
+      value: 'Bacteria are advantageous for bioremediation due to their wide availability,
+        rapid growth, and adaptability to diverse environments. Their cell walls
+        contain functional groups like aldehydes, ketones, and carboxyl groups that
+        enable the biosorption of heavy metals (Alabssawy & Hashem, 2024). Additionally,
+        some marine bacteria, like Bacillus cereus, can form biofilms, enhancing
+        their bioremediation capabilities. Genetic engineering has expanded the potential
+        of bacteria-based bioremediation by creating genetically modified microorganisms
+        with enhanced pollutant removal abilities.
+
+        
+
+        Despite their
+        strengths, bacteria-based bioremediation faces limitations. Environmental
+        factors like temperature, pH, and nutrient availability can significantly
+        influence their effectiveness, and this approach is primarily suitable for
+        biodegradable pollutants - recalcitrant substances like chlorinated organic
+        contaminants may remain unaffected (Alabssawy & Hashem, 2024). Using genetically
+        modified microorganisms also raises legal, ethical, and biosafety concerns
+        that require careful consideration.
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

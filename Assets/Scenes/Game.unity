@@ -683,6 +683,7 @@ RectTransform:
   - {fileID: 1312189140}
   - {fileID: 2121414148}
   - {fileID: 1795525477}
+  - {fileID: 791579613}
   m_Father: {fileID: 1404789802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -1025,6 +1026,121 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &791579612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 541039590}
+    m_Modifications:
+    - target: {fileID: 7095959914805150212, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_text
+      value: 'Click "Clean" to manually clean up plastic and earn Credits
+
+
+        Visit
+        the "Shop" to buy more bioremediators to passively clean plastic
+
+
+        The
+        "Research" menu allows you to fund research to improve the efficacy of these
+        bioremediators'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687899347836194975, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+      propertyPath: m_Name
+      value: PopupKey
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+--- !u!224 &791579613 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7885017894370347416, guid: 0842823a681622448b7534da0b31a41d, type: 3}
+  m_PrefabInstance: {fileID: 791579612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &868628428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1574,7 +1690,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
+  m_fontSize: 27
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2524,149 +2640,73 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1405543473237703403, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 1993940995205340344, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
+      propertyPath: m_text
+      value: Investigate Fungal Pathways
       objectReference: {fileID: 0}
-    - target: {fileID: 1405543473237703403, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405543473237703403, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405543473237703403, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405543473237703403, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405543473237703403, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+    - target: {fileID: 2141286161031215549, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
+      propertyPath: m_text
+      value: Bacterial Scale Studies
       objectReference: {fileID: 0}
     - target: {fileID: 2849034980629312463, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 289811659}
-    - target: {fileID: 2849034980629312463, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DoCleaning
-      objectReference: {fileID: 0}
-    - target: {fileID: 3469833888360714387, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
+    - target: {fileID: 3469844488484673536, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
       propertyPath: m_text
-      value: Clean!
+      value: Develop Hyperaccumulators
       objectReference: {fileID: 0}
-    - target: {fileID: 3469833888360714387, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 3469833888360714387, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3634829519938237120, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3634829519938237120, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3634829519938237120, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3634829519938237120, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3634829519938237120, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3634829519938237120, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169803519764247425, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169803519764247425, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169803519764247425, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169803519764247425, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169803519764247425, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4169803519764247425, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+    - target: {fileID: 3995835374940748678, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
+      propertyPath: m_text
+      value: Immobilize Enzymes
       objectReference: {fileID: 0}
     - target: {fileID: 4193570245679095180, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
       propertyPath: m_Name
       value: Menus
       objectReference: {fileID: 0}
-    - target: {fileID: 4333795544772731960, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 5222467408388615403, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
+      propertyPath: m_text
+      value: "To fully harness the potential of mycoremediation, future research
+        should prioritize investigating the fungal degradation pathways of aliphatic
+        hydrocarbons, optimizing conditions for mycoremediation, and developing strategies
+        for scaling up to field applications (Ant\xF3n-Herrero et al., 2023). Exploring
+        the use of spent mushroom substrate as a cost-effective inoculum and assessing
+        the long-term impact of mycoremediation on soil health are also crucial areas
+        for further investigation (Ant\xF3n-Herrero et al., 2023). By addressing
+        these challenges and expanding research efforts, mycoremediation can become
+        a more robust and widely implemented solution for environmental restoration.\r"
       objectReference: {fileID: 0}
-    - target: {fileID: 4333795544772731960, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+    - target: {fileID: 5649036611992340974, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
+      propertyPath: m_text
+      value: "Alabssawy and Hashem (2024) highlight that most research on heavy metal
+        bioremediation by marine organisms is limited to laboratory settings. They
+        emphasize the need to scale these studies to real-world applications in contaminated
+        soils, slurries, and aquatic systems. The authors also suggest that a deeper
+        understanding of the molecular mechanisms behind metal mobilization, uptake,
+        transport, and accumulation in these organisms is crucial for developing
+        more effective bioremediation strategies. Additionally, they propose exploring
+        novel approaches, such as combining nanotechnology with bioremediation and
+        addressing biosafety concerns and regulatory frameworks for genetically modified
+        microorganisms to enhance the applicability and acceptance of these technologies.\r"
       objectReference: {fileID: 0}
-    - target: {fileID: 4333795544772731960, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
+    - target: {fileID: 7202757294058809427, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
+      propertyPath: m_text
+      value: "Ionata et al. (2024) suggest future phytoremediation research focus
+        on developing hyperaccumulator species for remediation and bioenergy, optimizing
+        post-phytoremediation biomass for biofuel, enhancing phytoremediation through
+        genetic engineering, implementing agronomic practices to mitigate multiple
+        toxicants, controlling toxic compound transit for industrial biorefinery,
+        applying remediation in diverse field conditions, and developing profitable
+        metal recovery methods. Additionally, they emphasize the need for socio-economic
+        analyses to evaluate market impacts and occupational effects of phyto-derived
+        products.\r"
       objectReference: {fileID: 0}
-    - target: {fileID: 4333795544772731960, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4333795544772731960, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4333795544772731960, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4779153965184785483, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4779153965184785483, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4779153965184785483, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4779153965184785483, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4779153965184785483, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4779153965184785483, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+    - target: {fileID: 7252492698967018453, guid: 459169550d3857b40ab5a37f3540d6cd, type: 3}
+      propertyPath: m_text
+      value: "Using immobilization techniques and genetic engineering can further
+        enhance these enzymes' stability, reusability, and production, addressing
+        some of the limitations associated with their application (Amaro Bittencourt
+        et al., 2023).\r"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2681,6 +2721,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 12854050552776131, guid: 5d5a22a6f026cf4489d57e7003ed8db0, type: 3}
+      propertyPath: m_text
+      value: 'Plastic pollution has drastically increased since 1950, posing a significant
+        environmental threat (Ritchie et al., 2024). Bioremediation, utilizing microbes
+        to degrade pollutants, offers a promising solution (Iwamoto & Nasu, 2001).
+        This cost-effective and environmentally friendly approach is an alternative
+        to traditional methods (Bala et al., 2022).
+
+
+        Despite its potential,
+        further research is needed to optimize bioremediation''s reliability and
+        safety (Iwamoto & Nasu, 2001). Understanding microbe-pollutant interactions
+        and ecological impacts is crucial for developing effective and sustainable
+        strategies against various environmental pollutants (Bala et al., 2022).
+
+
+        This
+        work synthesizes existing knowledge on various bioremediation techniques
+        and encourages further research by simulating their hypothetical large-scale
+        applications.
+
+
+        Click "i" for info, and "Close" to begin!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 12854050552776131, guid: 5d5a22a6f026cf4489d57e7003ed8db0, type: 3}
+      propertyPath: m_fontSize
+      value: 30.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8360888214192377983, guid: 5d5a22a6f026cf4489d57e7003ed8db0, type: 3}
       propertyPath: m_Name
       value: PopupLock
